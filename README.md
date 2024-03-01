@@ -1,8 +1,8 @@
 # School-Portal
-  A School Management Portal for Secondary and Primary Schools
+  Discover the gateway to academic excellence with our school portal. Designed for students, teachers, and parents alike, our portal provides easy access to vital information and resources. From checking grades to accessing course materials, communicating with teachers, and staying updated on school events, our portal empowers every member of our educational community. Experience convenience, efficiency, and connectivity like never before as we navigate the journey of learning together. Welcome to our digital hub, where learning knows no bounds.
 
 
-## Technologies:
+## Technologies Used:
 ### Front-End
   ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) 
   ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) 

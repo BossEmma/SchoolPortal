@@ -25,12 +25,12 @@
   Coming soon..
 
 ## Getting Started:
-### Installation
+  Coming soon..
+<!--### Installation
 
 To install this project, follow these steps:
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/your-project.git
-
+   git clone https://github.com/your-username/your-project.git-->

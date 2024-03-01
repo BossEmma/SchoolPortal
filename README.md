@@ -1,5 +1,5 @@
-# School-Portal:
-  ### A School Management Portal for Secondary and Primary Schools
+# School-Portal
+  A School Management Portal for Secondary and Primary Schools
 
 
 ## Technologies:
@@ -12,11 +12,14 @@
   ![Python Badge](https://img.shields.io/badge/python-%23008080.svg?style=for-the-badge&logo=python&logoColor=%23FFFFFF)
   ![Django Badge](https://img.shields.io/badge/django-%2304AA51.svg?style=for-the-badge&logo=django&logoColor=%23FFFFFF)
 
+
 ## Screenshots:
-  ### Coming Soon..
+  Coming Soon..
+
 
 ## Features:
-  ### Coming Soon..
+  Coming Soon..
+
 
 ## Contributing:
-  ### Coming Soon..
+  Coming Soon..

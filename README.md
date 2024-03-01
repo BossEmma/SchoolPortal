@@ -12,14 +12,8 @@
   ![Python Badge](https://img.shields.io/badge/python-%23008080.svg?style=for-the-badge&logo=python&logoColor=%23FFFFFF)
   ![Django Badge](https://img.shields.io/badge/django-%2304AA51.svg?style=for-the-badge&logo=django&logoColor=%23FFFFFF)
 
-
-## Screenshots:
-  Coming Soon..
-
-
 ## Features:
   Coming Soon..
 
-
-## Contributing:
+## Screenshots:
   Coming Soon..

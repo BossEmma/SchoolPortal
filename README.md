@@ -12,7 +12,7 @@
   ![Django Badge](https://img.shields.io/badge/django-%2304AA51.svg?style=for-the-badge&logo=django&logoColor=%23FFFFFF)
 
 ## Features:
-  | Header 1 | Header 2 | Header 3 |
+  | UI | LOGIC | FEATURE |
   |----------|----------|----------|
   | Row 1, Col 1 | Row 1, Col 2 | Row 1, Col 3 |
   | Row 2, Col 1 | Row 2, Col 2 | Row 2, Col 3 |

@@ -12,13 +12,14 @@
   ![Django Badge](https://img.shields.io/badge/django-%2304AA51.svg?style=for-the-badge&logo=django&logoColor=%23FFFFFF)
 
 ## Features:
-  | UI | LOGIC | FEATURE |
+   Coming soon...
+  <!--| UI | LOGIC | FEATURE |
   |----------|----------|----------|
   | ✔ |  |  |
   |  |  |  |
-  |  |  |  |
+  |  |  |  |-->
 
-  Coming soon...
+ 
 
 
 ## Screenshots:

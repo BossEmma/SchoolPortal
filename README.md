@@ -14,10 +14,12 @@
 ## Features:
   | UI | LOGIC | FEATURE |
   |----------|----------|----------|
-  | ✔ |  | Row 1, Col 3 |
-  | ✔ |  | Row 2, Col 3 |
-  | ✔ |  | Row 3, Col 3 |
+  | ✔ |  |  |
+  |  |  |  |
+  |  |  |  |
+
+  Coming soon...
 
 
 ## Screenshots:
-  Coming Soon..
+  Coming soon..

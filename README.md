@@ -1,5 +1,5 @@
 # School-Portal
-  Discover the gateway to academic excellence with our school portal. Designed for students, teachers, and parents alike, our portal provides easy access to vital information and resources. From checking grades to accessing course materials, communicating with teachers, and staying updated on school events, our portal empowers every member of our educational community. Experience convenience, efficiency, and connectivity like never before as we navigate the journey of learning together. Welcome to our digital hub, where learning knows no bounds.
+  Discover the gateway to academic excellence with our school portal. Designed for students, teachers, and parents alike, our portal provides easy access to vital information and resources. From checking grades to accessing course materials, communicating with teachers, and staying updated on school events, our portal empowers every member of our educational community. Experience convenience, efficiency, and connectivity like never before as we navigate the journey of learning together.
 
   View Mobile Application: https://github.com/BossEmma/SchoolPortal-MobileApp
 
@@ -21,19 +21,5 @@
   |  |  |  |
   |  |  |  |-->
 
- 
-
-
 ## Screenshots:
   Coming soon..
-
-## Getting Started:
-  Coming soon..
-<!--### Installation
-
-To install this project, follow these steps:
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/your-username/your-project.git-->

@@ -1,0 +1,238 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="#">
+    <meta name="description" content="#">
+    <title>Sample School Template</title>
+
+    <!-- Stylesheets -->
+    {% include "temp_utils/style_imports.html" %}
+</head>
+
+<!-- page wrapper -->
+<body class="body_wrapper">
+
+    <!-- main header area -->
+    {% include "temp_utils/top_nav.html" %}
+    <!-- end main header area -->
+
+
+
+    <!-- page title -->
+    <section class="page-title">
+        <div class="container">
+            <div class="content-box">
+                <div class="title">Our Team</div>
+                <div class="bread-crumb">
+                    <a href="{% url "home" %}">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>Our Team</span> 
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Page Title-->
+
+
+    <!-- team section / team-page -->
+    <section class="our-team team-page sec-pad">
+        <div class="container">
+            <div class="team-title centred">
+                <div class="title-head">Our <span>Team</span></div>
+                <div class="section-title"><h2>Teachers Staff &amp; Faculty Members</h2></div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12 team-column">
+                    <div class="single-item">
+                        <div class="img-content">
+                            <div class="img-box"><a href="#"><figure><img src="{% static 'images/team/1.jpg' %}" alt=""></figure></a></div>
+                            <div class="team-social-area">
+                                <ul class="team-social centred">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                                <span class="curve"></span>
+                            </div>
+                        </div>
+                        <div class="lower-content">
+                            <h3><text>Lionel Green</text></h3>
+                            <p>Financial Director</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 team-column">
+                    <div class="single-item">
+                        <div class="img-content">
+                            <div class="img-box"><a href="#"><figure><img src="{% static 'images/team/5.jpg' %}" alt=""></figure></a></div>
+                            <div class="team-social-area">
+                                <ul class="team-social centred">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                                <span class="curve"></span>
+                            </div>
+                        </div>
+                        <div class="lower-content">
+                            <h3><text>Chandler Bing</text></h3>
+                            <p>Financial Director</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 team-column">
+                    <div class="single-item">
+                        <div class="img-content">
+                            <div class="img-box"><a href="#"><figure><img src="{% static 'images/team/3.jpg' %}" alt=""></figure></a></div>
+                            <div class="team-social-area">
+                                <ul class="team-social centred">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                                <span class="curve"></span>
+                            </div>
+                        </div>
+                        <div class="lower-content">
+                            <h3><text>Jacobe Martin</text></h3>
+                            <p>Financial Director</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 team-column">
+                    <div class="single-item">
+                        <div class="img-content">
+                            <div class="img-box"><a href="#"><figure><img src="{% static 'images/team/6.jpg' %}" alt=""></figure></a></div>
+                            <div class="team-social-area">
+                                <ul class="team-social centred">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                                <span class="curve"></span>
+                            </div>
+                        </div>
+                        <div class="lower-content">
+                            <h3><text>Steve Smith</text></h3>
+                            <p>Financial Director</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 team-column">
+                    <div class="single-item">
+                        <div class="img-content">
+                            <div class="img-box"><a href="#"><figure><img src="{% static 'images/team/7.jpg' %}" alt=""></figure></a></div>
+                            <div class="team-social-area">
+                                <ul class="team-social centred">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                                <span class="curve"></span>
+                            </div>
+                        </div>
+                        <div class="lower-content">
+                            <h3><text>Lionel Green</text></h3>
+                            <p>Financial Director</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 team-column">
+                    <div class="single-item">
+                        <div class="img-content">
+                            <div class="img-box"><a href="#"><figure><img src="{% static 'images/team/2.jpg' %}" alt=""></figure></a></div>
+                            <div class="team-social-area">
+                                <ul class="team-social centred">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                                <span class="curve"></span>
+                            </div>
+                        </div>
+                        <div class="lower-content">
+                            <h3><text>Chandler Bing</text></h3>
+                            <p>Financial Director</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 team-column">
+                    <div class="single-item">
+                        <div class="img-content">
+                            <div class="img-box"><a href="#"><figure><img src="{% static 'images/team/8.jpg' %}" alt=""></figure></a></div>
+                            <div class="team-social-area">
+                                <ul class="team-social centred">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                                <span class="curve"></span>
+                            </div>
+                        </div>
+                        <div class="lower-content">
+                            <h3><text>Jacobe Martin</text></h3>
+                            <p>Financial Director</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 team-column">
+                    <div class="single-item">
+                        <div class="img-content">
+                            <div class="img-box"><a href="#"><figure><img src="{% static 'images/team/9.jpg' %}" alt=""></figure></a></div>
+                            <div class="team-social-area">
+                                <ul class="team-social centred">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                                <span class="curve"></span>
+                            </div>
+                        </div>
+                        <div class="lower-content">
+                            <h3><text>Steve Smith</text></h3>
+                            <p>Financial Director</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- team section / team-page -->
+
+
+    <!-- newsletter section -->
+    {% include "temp_utils/newsletter.html" %}
+    <!-- newsletter section end -->
+
+    
+    <!-- main-footer area -->
+    {% include "temp_utils/footer.html" %}
+    <!-- main footer end -->
+
+
+
+<!--End pagewrapper-->
+
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target=".main-header"><span class="icon fa fa-angle-up"></span></div>
+
+
+<!--jquery js -->
+{% include "temp_utils/js_imports.html" %}
+
+<!-- End of .page_wrapper -->
+</body>
+
+<!-- Mirrored from html.tonatheme.com/2018/ecoisty/team.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Jan 2018 19:08:32 GMT -->
+</html>

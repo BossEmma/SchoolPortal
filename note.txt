@@ -1,0 +1,29 @@
+BURSARY(Record Avtivities)
+1. View all students
+* sort by class
+* sort by paid
+* sort by unpaid
+
+2. Search Name	
+
+3. View all Staff(employment status, subject, position, acct-details, contact, transaction-details)
+* sort by position
+* sort by employment date/status
+* sort by subject
+
+4. Modify Fees
+
+5. Add fees
+
+Feedback Mechanism
+
+6. Send/Automated Notifications
+
+
+Training Resources:
+
+Develop training materials and resources to educate students, parents, and staff about financial aid options, fee payment procedures, and portal functionality.
+Offer online tutorials, user guides, or FAQs to support users in navigating the bursary portal effectively.
+
+Students stauts(graduate supend expelled onghoing)
+

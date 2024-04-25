@@ -1,0 +1,175 @@
+{% load static %}
+
+{% include "./style_imports.html" %}
+
+<link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+<!-- main header area -->
+    <header class="main-header">
+
+        <!-- header upper -->
+        <div class="header-upper">
+            <div class="container">
+                <ul class="top-left">
+                    <li><i class="fa fa-phone"></i>Call:  123 4561 5523 </li>
+                    <li><i class="fa fa-envelope"></i>Email:  info@abcsecondaryschool.com</li>
+                </ul>
+                <div class="top-right">
+                    <!--<div class="search-box-area">
+                        <div class="search-toggle"><i class="fa fa-search"></i></div>
+                        <div class="search-box">
+                            <form method="post" action="#">
+                                <div class="form-group">
+                                    <input type="search" name="search" placeholder="Search Here" required>
+                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>-->
+                    <ul class="social-top">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                       <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>             
+            </div>
+        </div>
+        <!-- end header upper -->
+
+        <!-- header lower/fixed-header -->     
+        <div class="header-lower">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="logo-box">
+                            <a href="index-2.html"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-sm-12 col-xs-12">
+                        <div class="menu-bar">
+                            <nav class="main-menu">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                        <li class="current"><a href="{% url "home" %}">Home</a>
+                                        </li>
+                                          <li class="dropdown"><a href="#">About Us</a>
+                                            <ul>
+                                                <li><a href="{% url "about" %}">Who We are</a></li>
+                                                <li><a href="{% url "message" %}">Principal's Message</a></li>
+                                                <li><a href="{% url "vision" %}">Mission,Vision &amp; Objective</a></li>
+                                                <li><a href="{% url "staffs" %}">Administrative Staff &amp; Faculty Members</a></li>
+                                                <li><a href="{% url "resources" %}">Resources &amp; Facilities</a></li>
+                                                <li><a href="{% url "history" %}">History</a></li>
+                                            </ul>
+                                        </li>
+                                         <li class="dropdown"><a href="#">Academics</a>
+                                            <ul>
+                                                <li><a href="{% url "academic_info" %}">Academic Information</a></li>
+                                                <li><a href="{% url "admission_notice" %}">Admission Notices</a></li>  
+                                            </ul>
+                                        </li>
+                                        <li><a href="{% url "news" %}">News</a>
+                                        </li>
+                                          <li class="dropdown"><a href="javascript:void(0)">Events</a>
+                                            <ul>
+                                                <li><a href="{% url "event" %}">Events</a></li>
+                                                <li><a href="{% url "event_details" %}">Event Details</a></li> 
+                                            </ul>
+                                        </li>
+                                       
+                                        <li class="dropdown"><a href="javascript:void(0)">Blog</a>
+                                            <ul>
+                                                <li><a href="{% url "blog" %}">Our Blog</a></li>
+                                                <li><a href="{% url "blog_details" %}">Blog Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{% url "contact" %}">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end header lower/fixed-header -->
+
+
+        <!--sticky header-->
+        <div class="sticky-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="logo-box">
+                            <a href="index-2.html"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-sm-12 col-xs-12">
+                        <div class="menu-bar">
+                            <nav class="main-menu">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                        <li class="current"><a href="{% url "home" %}">Home</a>
+                                        </li>
+                                          <li class="dropdown"><a href="#">About Us</a>
+                                            <ul>
+                                                <li><a href="{% url "about" %}">Who We are</a></li>
+                                                <li><a href="{% url "message" %}">Principal's Message</a></li>
+                                                <li><a href="{% url "vision" %}">Mission,Vision &amp; Objective</a></li>
+                                                <li><a href="{% url "staffs" %}">Administrative Staff &amp; Faculty Members</a></li>
+                                                <li><a href="{% url "resources" %}">Resources &amp; Facilities</a></li>
+                                                <li><a href="{% url "history" %}">History</a></li>
+                                            </ul>
+                                        </li>
+                                          <li class="dropdown"><a href="javascript:void(0)">Academics</a>
+                                            <ul>
+                                                <li><a href="{% url "academic_info" %}">Academic Information</a></li>
+                                                <li><a href="{% url "admission_notice" %}">Admission Notices</a></li>  
+                                            </ul>
+                                        </li>
+                                        <li><a href="{% url "news" %}">News</a>
+                                        </li>
+                                            <li class="dropdown"><a href="#">Events</a>
+                                            <ul>
+                                                <li><a href="{% url "event" %}">Events</a></li>
+                                                <li><a href="{% url "event_details" %}">Event Details</a></li> 
+                                            </ul>
+                                        </li>
+                                      
+                                        <li class="dropdown"><a href="javascript:void(0)">Blog</a>
+                                            <ul>
+                                                <li><a href="{% url "blog" %}">Our Blog</a></li>
+                                                <li><a href="{% url "blog_details" %}">Blog Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{% url "contact" %}">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end sticky header -->
+
+    </header>
+    <!-- end main header area -->

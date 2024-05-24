@@ -20,10 +20,33 @@ Feedback Mechanism
 6. Send/Automated Notifications
 
 
-Training Resources:
-
-Develop training materials and resources to educate students, parents, and staff about financial aid options, fee payment procedures, and portal functionality.
-Offer online tutorials, user guides, or FAQs to support users in navigating the bursary portal effectively.
 
 Students stauts(graduate supend expelled onghoing)
+
+
+#admin 
+enter grad
+generate report cards
+view self attendance Record
+view timetable/classes
+blog
+curiculum management(staff/students)
+
+#tag staffs
+
+staff roles
+
+salary
+
+
+
+user=models.OneToOneField(User,on_delete=models.CASCADE)
+
+
+class Attendance(models.Model):
+    roll=models.CharField(max_length=10,null=True)
+    date=models.DateField()
+    cl=models.CharField(max_length=10)
+    present_status = models.CharField(max_length=10)
+
 

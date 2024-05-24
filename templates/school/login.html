@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <title>Portal Login</title>
+</head>
+<body>
+    <form method="POST">
+        <h1>Student Sign In</h1>
+
+        <div class="input-con">
+            <label>Email Address</label>
+            <input class="input-box" placeholder="Email Address" name="email" required/>
+        </div>
+
+        <div class="input-con">
+            <label>Password</label>
+            <input class="input-box" placeholder="Password" name="password" required/>
+        </div>
+
+    
+        <a href="#">Forgot password?</a>
+
+        <input class="submit" type="submit" value="SIGN IN"/>
+    </form>
+</body>
+</html>

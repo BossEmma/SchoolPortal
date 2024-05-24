@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'student/css/table.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="{% static 'student/js/script.js' %}"></script>
+
+    <title>Dashboard</title>
+</head>
+<body>
+    {% include "./utils/side-nav.html" %}
+
+    <div id="main">
+        {% include "./utils/header.html" %}
+
+        <div id="main2">
+            
+            <div id="con">
+                <h2>Payment Guideline</h2>
+                <text>1. Select <b>Session</b>, <b>Description </b>and wait for the <b>Amount</b> to load,</text>
+
+                <text>2. Select the <b>Payment Type</b> and Click <b>Proceed Button</b></text>
+
+                <text style="line-height: 2;"><b>NOTE:</b> If your payment type is <b>Card </b>that means you want to make payment using your <b>Master Card or Verve Card</b>. However if you select <b>Bank</b> it means you want to go to the bank to make payment as such print the <b>Payment Invoice</b> and proceed to the bank to pay using the <b>RRR Number</b> on the invoice.</text>
+            <div>
+
+            <!--<h5>© 2012 - 2024. Federal University of Petroleum Resources, Effurun | Student Online Academic Portal (SOAP)</h5>-->
+        </div>
+    </div>
+</body>
+</html>

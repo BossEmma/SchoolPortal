@@ -1,0 +1,238 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="#">
+    <meta name="description" content="#">
+    <title>Sample School Template</title>
+
+    <!-- Stylesheets -->
+    {% include "./temp_utils/style_imports.html" %}
+
+</head>
+
+<!-- page wrapper -->
+<body class="body_wrapper">
+
+    <!-- main header area -->
+    {% include "./temp_utils/top_nav.html" %}
+    <!-- end main header area -->
+
+
+
+    <!-- page title -->
+    <section class="page-title">
+        <div class="container">
+            <div class="content-box">
+                <div class="title">Event Details</div>
+                <div class="bread-crumb">
+                    <a href="{% url "home" %}">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>Event Details</span> 
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Page Title-->
+
+
+    <!-- event-section / our-event-details -->
+    <section class="event-section event-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-sm-12 col-xs-12 content-side">
+                    <div class="event-details-content">
+                        <div class="single-item">
+                            <div class="img-box">
+                                <figure><img src="{% static 'images/event/details.jpg' %}" alt=""></figure>
+                                <div class="date"><h3>15</h3><p>Jan</p></div>
+                            </div>
+                            <div class="lower-content">
+                                <div class="title">Mauris Fommodo Aucib.</div>
+                                <ul class="meta">
+                                    <li><i class="fa fa-clock-o"></i>9am - 3pm</li>
+                                    <li><i class="fa fa-map-marker"></i>Hattigauda,Kathmandu.</li>
+                                </ul>
+                                <div class="text">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
+                                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit sed quia non numquam eius modi.</p>
+                                    <p>Adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 sidebar-side">
+                    <div class="sidebar-content">
+                        <div class="event-meta">
+                            <div class="title">Events Details</div>
+                            <div class="single-meta">
+                                <i class="fa fa-calendar"></i>
+                                <strong>Date:</strong>&nbsp;&nbsp;
+                                <p>Jan 15, 2018</p>
+                            </div>
+                            <div class="single-meta">
+                                <i class="fa fa-clock-o"></i>
+                                <strong>Time:</strong>&nbsp;&nbsp;
+                                <p>9.00 am - 11.00 am</p>
+                            </div>
+                           
+                        </div>
+                        <div class="event-location">
+                            <div class="title">Location</div>
+                            <div class="single-location">
+                                <i class="fa fa-map-marker"></i>
+                                <strong>Address:</strong>&nbsp;&nbsp;
+                                <p>Hattigauda,Budhanilkantha,Kathmandu</p>
+                            </div>
+                            <div class="single-location">
+                                <i class="fa fa-phone"></i>
+                                <strong>Phone:</strong>&nbsp;&nbsp;
+                                <p>9.00 am - 11.00 am</p>
+                            </div>
+                           <!-- <div class="single-meta">
+                                <i class="fa fa-globe"></i>
+                                <strong>Website:</strong>&nbsp;&nbsp;
+                                <p><a href="#">http://www.example.com</a></p>
+                            </div>-->
+                        </div>
+                        <div class="google-map-area">
+                            <div 
+                                class="google-map" 
+                                id="contact-google-map" 
+                                data-map-lat="27.756776" 
+                                data-map-lng="85.349201" 
+                                data-icon-path="{% static 'images/resources/map-marker.png' %}" 
+                                data-map-title="Hattigauda, Kathmandu, Nepal" 
+                                data-map-zoom="12" 
+                                data-markers='{
+                                    "marker-1": [27.756776, 85.349201, "<h4>Branch Office</h4><p>Hattigauda,Kathmandu</p>","../static/images/resources/map-marker.png"]
+                                }'>
+
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- event-section / our-event end -->
+
+
+    <!-- team section -->
+    <section class="our-team">
+        <div class="container">
+            <div class="title">Event Participants</div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12 team-column">
+                    <div class="single-item">
+                        <div class="img-content">
+                            <div class="img-box"><a href="javascript:void(0)"><figure><img src="{% static 'images/team/1.jpg' %}" alt=""></figure></a></div>
+                            <div class="team-social-area">
+                                <ul class="team-social centred">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                                <span class="curve"></span>
+                            </div>
+                        </div>
+                        <div class="lower-content">
+                            <h3><a href="javascript:void(0)">Lionel Green</a></h3>
+                            <p>Staff</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 team-column">
+                    <div class="single-item">
+                        <div class="img-content">
+                            <div class="img-box"><a href="javascript:void(0)"><figure><img src="{% static 'images/team/2.jpg' %}" alt=""></figure></a></div>
+                            <div class="team-social-area">
+                                <ul class="team-social centred">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                                <span class="curve"></span>
+                            </div>
+                        </div>
+                        <div class="lower-content">
+                            <h3><a href="javascript:void(0)">Chandler Bing</a></h3>
+                            <p>Teacher</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 team-column">
+                    <div class="single-item">
+                        <div class="img-content">
+                            <div class="img-box"><a href="javascript:void(0)"><figure><img src="{% static 'images/team/3.jpg' %}" alt=""></figure></a></div>
+                            <div class="team-social-area">
+                                <ul class="team-social centred">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                                <span class="curve"></span>
+                            </div>
+                        </div>
+                        <div class="lower-content">
+                            <h3><a href="javascript:void(0)">Jacobe Martin</a></h3>
+                            <p>Teacher</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 team-column">
+                    <div class="single-item">
+                        <div class="img-content">
+                            <div class="img-box"><a href="javascript:void(0)"><figure><img src="{% static 'images/team/4.jpg' %}" alt=""></figure></a></div>
+                            <div class="team-social-area">
+                                <ul class="team-social centred">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                                <span class="curve"></span>
+                            </div>
+                        </div>
+                        <div class="lower-content">
+                            <h3><a href="javascript:void(0)">Steve Smith</a></h3>
+                            <p>Accountant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- team section -->
+
+
+    <!-- newsletter section -->
+    {% include "./temp_utils/newsletter.html" %}
+    <!-- newsletter section end -->
+
+    
+    <!-- main-footer area -->
+    {% include "./temp_utils/footer.html" %}
+    <!-- main footer end -->
+
+
+
+<!--End pagewrapper-->
+
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target=".main-header"><span class="icon fa fa-angle-up"></span></div>
+
+
+<!--jquery js -->
+{% include "./temp_utils/js_imports.html" %}
+
+<!-- End of .page_wrapper -->
+</body>
+</html>

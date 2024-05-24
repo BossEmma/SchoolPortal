@@ -1,0 +1,93 @@
+{% load static %}
+
+<style>
+    #header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+    
+    #ham{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .fa-bars{
+        display: none;
+    }
+    
+    #header-con{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 30%;
+        justify-content: space-between;
+    }
+    
+    #profile-con{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 70%;
+    }
+    
+    .pic{
+        overflow: hidden;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        border-style: solid;
+        border-width: 1px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .pic img{
+        width: 100%;
+        height: 100%;
+    }
+
+    @media screen and (max-width: 1000px) {
+        .fa-bars{
+            display: block;
+        }
+    
+        .username{
+            display: none;
+        }    
+    }
+</style>
+
+
+<div id="header">
+    <span id="ham">
+        
+        <i onclick="OpenSideNav()" class="fa-solid fa-bars mid-text"></i>
+        <text class="mid-bold-text">&nbsp;Dashboard</text>
+    </span>
+
+    <div id="header-con">
+        <a href="{% url 'student_announcements' %}" class="small-text"><i class="fa-solid fa-bell mid-text"></i></a>
+        
+
+        <div id="profile-con">
+            <div class="pic">
+                <img src="https://i.guim.co.uk/img/media/10470940704403920dd283f0fea8b27bed013eef/0_119_1428_857/master/1428.jpg?width=620&dpr=1&s=none"/>
+            </div>
+            
+            <text class="small-text username">John Kennedy</text>
+        </div>               
+    </div>
+</div>
+
+<script>
+    function OpenSideNav(){
+        document.getElementById("side-nav").style.width= '70%'
+        document.getElementById("side-nav").style.padding= '20px';
+    }
+</script>

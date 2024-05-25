@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-from .models import StaffProfile, Gallery, Announcement, Events 
+from .models import  Gallery, Announcement, Events 
 
 
 

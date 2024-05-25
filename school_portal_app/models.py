@@ -90,13 +90,20 @@ class UserManager(BaseUserManager):
 
 class User(AbstractBaseUser):
     email = models.EmailField(unique=True)
+    first_name = models.CharField(("First Name"), max_length=100, blank=True, null=True)
+    middle_name = models.CharField(("Other Name"), max_length=100, blank=True, null=True)
+    last_name = models.CharField(("Last Name"), max_length=100, blank=True, null=True)
+    age = models.PositiveIntegerField(("Age"), validators=[MaxValueValidator(50)], blank=True, null=True)
+    phone_number = models.CharField(("Phone Number"), max_length=100, blank=True, null=True)
+    phone_number2 = models.CharField(("Phone Number 2"), max_length=100, blank=True, null=True)
+    passport = models.ImageField(upload_to='images/', blank=True, null=True)
 
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = []
+    REQUIRED_FIELDS = ['first_name', 'middle_name', 'last_name', 'age', 'phone_number']
 
     objects = UserManager()
 
@@ -108,10 +115,14 @@ class User(AbstractBaseUser):
 
     def has_module_perms(self, app_label):
         return self.is_superuser
+    
+    @property
+    def full_name(self):
+        return f"{self.first_name} {self.middle_name} {self.last_name}"  
+    
 
 
-#Student Modells
-
+#Student Models
 STUDENT_CLASS = [
     ('JSS 1', 'JSS 1'),
     ('JSS 2', 'JSS 2'),
@@ -128,19 +139,41 @@ STATUS = [
     ('Expelled', 'Expelled'),
 ]
 
-JSS_SUBJECTS = [
+SUBJECTS = [
+    #Basic Subjects
     ('Mathematics', 'Mathematics'),
-    ('English', 'English'),
-]
+    ('English Language', 'English Language'),
 
-SSS_SCIENCE_SUBJECTS = [
+    #Junior Secondary School
+    ('Basic Science', 'Basic Science'),
+    ('Social Studies', 'Social Studies'),
+    ('Fine Arts', 'Fine Arts'),
+    ('Agricultural Science', 'Agricultural Science'),
+    ('Civic Education', 'Civic Education'),
+    ('Christian Religion Studies', 'Christian Religion Studies'),
+    ('Physical and Health Education', 'Physiacal and Health Education'),
+    ('Business Studies', 'Business Studies'),
+    ('Computer Science', 'Computer Science'),
+    ('Home Economics', 'Home Economics'),
+    ('Basic Technology', 'Basic Technology'),
+    
+    #`SSS Science Subjects
+    ('Biology', 'Biology'),
     ('Physics', 'Physics'),
     ('Chemistry', 'Chemistry'),
-]
+    ('Further Mathematics', 'Further Mathematics'),
 
-SSS_ART_SUBJECTS = [
-    ('Physics', 'Physics'),
-    ('Chemistry', 'Chemistry'),
+
+    # SSS Arts Subjects
+    ('Food and Nutrition', 'Food and Nutrition'),
+    ('Finance Account', 'Finance Account'),
+    ('Commerce', 'Commerce'),
+
+    ('Economics', 'Economics'),
+    ('Government', 'Government'),
+
+    ('Literature in English', 'Literature in English'),
+    ('Geography', 'Geography'),
 ]
 
 TRANSACTION_STATUS= [
@@ -148,87 +181,76 @@ TRANSACTION_STATUS= [
     ('SUCCESS', 'SUCCESS')
 ]
 
-
-
-class StudentProfile(models.Model):
-    user=models.OneToOneField(User,on_delete=models.CASCADE, blank=True, null=True)
-    first_name = models.CharField(("First Name"), max_length=100, blank=True, null=True)
-    other_name = models.CharField(("Other Name"), max_length=100, blank=True, null=True)
-    last_name = models.CharField(("Last Name"), max_length=100, blank=True, null=True)
-    phone_number = models.CharField(("Guardian Phone Number"), max_length=100, blank=True, null=True)
-    phone_number2 = models.CharField(("Guardian Phone Number 2"), max_length=100, blank=True, null=True)
-    age = models.PositiveIntegerField(("Age"), validators=[MaxValueValidator(50)], blank=True, null=True)
-    student_class = models.CharField(("Class"), choices=STUDENT_CLASS, max_length=50, null=True)
-    status= models.CharField(("Status"), max_length=100, choices=STATUS, blank=True, null=True)
-    subjects = models.ForeignKey('Subject', on_delete=models.SET_NULL, null=True, blank=True, related_name='students')
-    passport = models.ImageField(upload_to='images/', blank=True)
-
-    @property
-    def full_name(self):
-        return f"{self.first_name} {self.other_name} {self.last_name}"  
+class Student(models.Model):
+    user=models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True)
+    student_class = models.ForeignKey("Class", on_delete=models.SET_NULL, null=True, blank=True, related_name='students')
+    status= models.CharField("Status", max_length=100, choices=STATUS, blank=True, null=True)
 
     def __str__(self):
-        return self.full_name
-
+        return self.user.full_name
+    
+    @property
+    def full_name(self):
+        return f"{self.user.first_name} {self.user.middle_name} {self.user.last_name}" 
+    
 
 
 class Subject(models.Model):
-    name = models.CharField(("Subject Name"), max_length=100, null=True)
-    student_class = models.CharField(("Class"), choices=STUDENT_CLASS, max_length=50, null=True)
+    name = models.CharField(("Subject Name"), choices=SUBJECTS, max_length=100, null=True)
+
+    def __str__(self):
+        return self.name
+    
+
+class Class(models.Model):
+    name= models.CharField(("Class"), choices=STUDENT_CLASS, max_length=100, blank=True, null=True)
+    subjects = models.ManyToManyField(Subject, blank=True)
 
     def __str__(self):
         return self.name
 
 
-
 class Result(models.Model):
-    student = models.ForeignKey(("StudentProfile"), on_delete=models.CASCADE, related_name='results')
-    subject = models.ForeignKey(("Subject"), on_delete=models.CASCADE, related_name='results')
+    student = models.ForeignKey(("Student"), on_delete=models.CASCADE, related_name='results')
+    subject = models.ForeignKey(("Subject"), on_delete=models.CASCADE, choices=STATUS, related_name='subjects')
     score = models.DecimalField(("Score"), max_digits=5, decimal_places=2, null=True, blank=True)
 
     def __str__(self):
-        return f"{self.student.full_name} - {self.subject.name} - Score: {self.score}"
+        return self.student.full_name
 
 
 
 class Transaction_History(models.Model):
-    user = models.ForeignKey(StudentProfile, on_delete=models.CASCADE)
+    student = models.ForeignKey(Student, on_delete=models.CASCADE)
     amount= models.IntegerField(("Paid Balance"), blank= True, validators=[MaxValueValidator(9999999999)])
     timestamp= models.DateTimeField(("Date"), auto_now_add=True)
     status= models.CharField(("Payment Status"), choices=TRANSACTION_STATUS, max_length= 50)
     method= models.CharField(("Payment Method"), max_length= 50)
 
     def __str__(self):
-        return self.user.full_name
+        return self.student.full_name
+
+
 
 
 # Staff Models
-
 STAFF_ROLE = [
     ('Teacher', 'Teacher'),
     ('Bursary', 'Bursary'),
     ('Library', 'Library'),
 ]
 
-class StaffProfile(models.Model):
+class Staff(models.Model):
     user=models.OneToOneField(User,on_delete=models.CASCADE, blank=True, null=True)
-    first_name= models.CharField(("First Name"), max_length=100, null=True)
-    other_name= models.CharField(("Other Name"), max_length=100, null=True)
-    last_name= models.CharField(("Last Name"), max_length=100, null=True)
-    phone_number= models.CharField(("Phone Number"), max_length=100, null=True)
-    age= models.PositiveIntegerField(("Age"), validators=[MaxValueValidator(50)], null=True)
     role=  models.CharField(("Staff Role"), choices=STAFF_ROLE, max_length=50, null=True)
-
-    #salary
-
-    passport = models.ImageField(upload_to='images/', blank=True)
-  
+    salary= models.IntegerField(("Salary Amount"), blank= True, validators=[MaxValueValidator(9999999999)])
     bank= models.CharField(("Staff Role"), choices=STAFF_ROLE, max_length=50, null=True)
     account_number= models.CharField(("Staff Role"), choices=STAFF_ROLE, max_length=50, null=True)
 
+    def __str__(self):
+        return self.user.full_name
+    
     @property
     def full_name(self):
-        return f"{self.first_name} {self.other_name} {self.last_name}"  
-
-    def __str__(self):
-        return self.full_name
+        return f"{self.user.first_name} {self.user.middle_name} {self.user.last_name}" 
+    

@@ -16,8 +16,7 @@
   | FEATURE | UI | LOGIC |
   |----------|----------|----------|
   | Automated Announcements | ✔  | ✔  |
-  |  |  |  |
-  |  |  |  |
+  | Attendance | ✔ | ✔  |
 
 ## Screenshots:
   Coming soon..

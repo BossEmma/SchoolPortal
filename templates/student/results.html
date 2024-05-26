@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'student/css/dashboard.css' %}">
+    <link rel="stylesheet" href="{% static 'student/css/table.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="{% static 'student/js/script.js' %}"></script>
@@ -17,10 +17,139 @@
     <div id="main">
         {% include "./utils/header.html" %}
 
-        <div id="main2">
-            <div class="content" id="student">
-
+        <div id="main2" style="overflow-x:auto;">
+            <div>
+                <text>Transaction Histoy</text>
+                <text>You can click on Update link to update your payment on the portal</text>                
             </div>
+
+            <div style="overflow-x:auto;">
+
+                <table>
+                    <tr>
+                        <th>Subjects</th>
+                        <th>1st Test</th>
+                        <th>2st Test</th>
+                        <th>Exam</th>
+                        <th>Total</th>
+                        <th>Grade</th>
+                    </tr>
+                    <tr>
+                        <td>English Language</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>270</td>
+                        <td>334</td>
+                        <td>A</td>
+                    </tr>
+
+                    <tr>
+                        <td>English Language</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>270</td>
+                        <td>334</td>
+                        <td>A</td>
+                    </tr>
+
+                    <tr>
+                        <td>English Language</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>270</td>
+                        <td>334</td>
+                        <td>A</td>
+                    </tr>
+
+                    <tr>
+                        <td>English Language</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>270</td>
+                        <td>334</td>
+                        <td>A</td>
+                    </tr>
+
+                    <tr>
+                        <td>English Language</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>270</td>
+                        <td>334</td>
+                        <td>A</td>
+                    </tr>
+
+                    <tr>
+                        <td>English Language</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>270</td>
+                        <td>334</td>
+                        <td>A</td>
+                    </tr>
+
+                    <tr>
+                        <td>English Language</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>270</td>
+                        <td>334</td>
+                        <td>A</td>
+                    </tr>
+
+                    <tr>
+                        <td>English Language</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>270</td>
+                        <td>334</td>
+                        <td>A</td>
+                    </tr>
+
+                    <tr>
+                        <td>English Language</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>270</td>
+                        <td>334</td>
+                        <td>A</td>
+                    </tr>
+
+                    <tr>
+                        <td>English Language</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>270</td>
+                        <td>334</td>
+                        <td>A</td>
+                    </tr>
+
+                    <tr>
+                        <td>English Language</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>270</td>
+                        <td>334</td>
+                        <td>A</td>
+                    </tr>
+
+                    <tr>
+                        <td>English Language</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>270</td>
+                        <td>334</td>
+                        <td>A</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="analysis">
+                <h2>Transaction History</h2>
+                <h5>You can click on Update link to update your payment on the portal</h5>
+            </div>
+
+            <!--<h5>© 2012 - 2024. Federal University of Petroleum Resources, Effurun | Student Online Academic Portal (SOAP)</h5>-->
         </div>
     </div>
 </body>

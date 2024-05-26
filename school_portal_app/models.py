@@ -65,8 +65,38 @@ class Blogs(models.Model):
         return self.title
     
 
+"""Trer = [
+    ('JSS 1', 'JSS 1'),
+    ('JSS 2', 'JSS 2'),
+    ('JSS 3', 'JSS 3'),
+    ('SSS 1', 'SSS 1'),
+    ('SSS 2', 'SSS 2'),
+    ('SSS 3', 'SSS 3')
+]"""
 
 
+class SchoolSession(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+    start_date = models.DateField()
+    end_date = models.DateField()
+    is_current = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.name
+
+class Term(models.Model):
+    name = models.CharField(max_length=100)
+    session = models.ForeignKey(SchoolSession, related_name='terms', on_delete=models.CASCADE)
+    start_date = models.DateField()
+    end_date = models.DateField()
+
+    def __str__(self):
+        return f"{self.name} ({self.session.name})"
+
+
+
+#USERS
+    
 class UserManager(BaseUserManager):
     def create_user(self, surname, password=None, **extra_fields):
         if not surname:
@@ -93,6 +123,7 @@ class User(AbstractBaseUser):
     middle_name = models.CharField(("Other Name"), max_length=100, blank=True, null=True)
     surname = models.CharField(("Surname"), max_length=100, blank=True, null=True, unique=True)
     age = models.PositiveIntegerField(("Age"), validators=[MaxValueValidator(50)], blank=True, null=True)
+    #sex
     phone_number = models.CharField(("Phone Number"), max_length=100, blank=True, null=True)
     phone_number2 = models.CharField(("Phone Number 2"), max_length=100, blank=True, null=True)
     passport = models.ImageField(upload_to='images/', blank=True, null=True)
@@ -216,7 +247,7 @@ class Result(models.Model):
 
     def __str__(self):
         return self.student.full_name
-
+    
 
 
 class Transaction_History(models.Model):
@@ -234,9 +265,9 @@ class Transaction_History(models.Model):
 
 # Staff Models
 STAFF_ROLE = [
+    ('Form Teacher', 'Form Teacher'),
     ('Teacher', 'Teacher'),
     ('Bursary', 'Bursary'),
-    ('Library', 'Library'),
 ]
 
 class Staff(models.Model):

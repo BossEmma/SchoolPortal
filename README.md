@@ -13,11 +13,11 @@
 
 ## Features:
    Coming soon...
-  <!--| UI | LOGIC | FEATURE |
+  | FEATURE | UI | LOGIC |
   |----------|----------|----------|
-  | ✔ |  |  |
+  | Automated Announcements | ✔  | ✔  |
   |  |  |  |
-  |  |  |  |-->
+  |  |  |  |
 
 ## Screenshots:
   Coming soon..

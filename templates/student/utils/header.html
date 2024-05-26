@@ -68,7 +68,7 @@
     <span id="ham">
         
         <i onclick="OpenSideNav()" class="fa-solid fa-bars mid-text"></i>
-        <text class="mid-bold-text">&nbsp;Dashboard</text>
+        <text class="mid-bold-text">&nbsp;{{ url }}</text>
     </span>
 
     <div id="header-con">
@@ -77,10 +77,10 @@
 
         <div id="profile-con">
             <div class="pic">
-                <img src="https://i.guim.co.uk/img/media/10470940704403920dd283f0fea8b27bed013eef/0_119_1428_857/master/1428.jpg?width=620&dpr=1&s=none"/>
+                <img src="{{ user.passport }}"/>
             </div>
             
-            <text class="small-text username">John Kennedy</text>
+            <text class="small-text username">{{ user.full_name }}</text>
         </div>               
     </div>
 </div>

@@ -20,9 +20,8 @@ from school_portal_app import SchoolViews
 from school_portal_app import StudentViews
 from school_portal_app import StaffViews
 from school_portal_app import AdminViews
-
-
-
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -45,6 +44,7 @@ urlpatterns = [
     path('contact/', SchoolViews.contact, name="contact"),
 
 
+    path('student/login', StudentViews.student_login, name="student_login"),
     path('student/dashboard', StudentViews.dashboard, name="student_dashboard"),
     path('student/results', StudentViews.results, name="student_results"),
     path('student/announcements', StudentViews.announcements, name="student_announcements"),
@@ -68,6 +68,7 @@ urlpatterns = [
 
 
     path('sign_out/', SchoolViews.sign_out, name="sign_out"),
-]
+
+]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = 'school_portal_app.SchoolViews.handler404'

@@ -9,7 +9,7 @@ from django.contrib.auth.models import Group
 from django.http import HttpResponseRedirect
 
 
-from .models import Gallery, Announcement, Events, Student
+from .models import Announcement, Events, Student
 
 
 
@@ -18,9 +18,6 @@ results_url = "Results"
 E_Payment_url= "E-Payment"
 Profile_url= "Profile"
 change_pasaaword_url= "Change Password"
-
-
-
 
 
 
@@ -37,18 +34,21 @@ def student_login(request):
         else:
             error_message= "Invalid Username or Password"
             return render(request, "login.html", {"error_message":error_message})
-    return render(request, "student_login.html")
+    return render(request, "student/student_login.html")
 
 
 
 
 
-@login_required(login_url='/student/login/')
+@login_required(login_url='/student/login')
 def dashboard(request):
-    user = request.user.student
+    user= request.user
+    student_data= Student.objects.filter(user=request.user)
     url= "Dashboard"
     context = {
         'user':user,
+        'class':student_data[0].student_class,
+        'status':student_data[0].status,
         'url': url
     }
     return render(request, "student/dashboard.html", context)
@@ -56,7 +56,7 @@ def dashboard(request):
 
 
 
-@login_required(login_url='/student/login/')
+@login_required(login_url='/student/login')
 def results(request):
     user = request.user
     url= "Results"
@@ -68,7 +68,7 @@ def results(request):
 
 
 
-@login_required(login_url='/student/login/')
+@login_required(login_url='/student/login')
 def announcements(request):
     user = request.user
     url= "Announcements"
@@ -81,7 +81,7 @@ def announcements(request):
 
 
 
-@login_required(login_url='/student/login/')
+@login_required(login_url='/student/login')
 def make_payment(request):
     user = request.user
     return render(request, "student/make_payment.html")
@@ -89,7 +89,7 @@ def make_payment(request):
 
 
 
-@login_required(login_url='/student/login/')
+@login_required(login_url='/student/login')
 def update_payment(request):
     user = request.user
     return render(request, "student/update_payment.html")
@@ -98,7 +98,7 @@ def update_payment(request):
 
 
 
-@login_required(login_url='/student/login/')
+@login_required(login_url='/student/login')
 def payment_guideline(request):
     user = request.user
     return render(request, "student/payment_guideline.html")
@@ -106,7 +106,7 @@ def payment_guideline(request):
 
 
 
-@login_required(login_url='/student/login/')
+@login_required(login_url='/student/login')
 def transaction_history(request):
     user = request.user
     return render(request, "student/transaction_history.html")
@@ -115,7 +115,7 @@ def transaction_history(request):
 
 
 
-@login_required(login_url='/student/login/')
+@login_required(login_url='/student/login')
 def fee_structure(request):
     user = request.user
     return render(request, "student/fee_structure.html")
@@ -124,7 +124,7 @@ def fee_structure(request):
 
 
 
-@login_required(login_url='/student/login/')
+@login_required(login_url='/student/login')
 def student_profile(request):
     user = request.user
     return render(request, "student/profile.html")
@@ -133,7 +133,7 @@ def student_profile(request):
 
 
 
-@login_required(login_url='/student/login/')
+@login_required(login_url='/student/login')
 def change_password(request):
     user = request.user
     return render(request, "student/change_password.html")

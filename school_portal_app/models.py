@@ -68,16 +68,15 @@ class Blogs(models.Model):
 
 
 class UserManager(BaseUserManager):
-    def create_user(self, email, password=None, **extra_fields):
-        if not email:
-            raise ValueError('The Email field must be set')
-        email = self.normalize_email(email)
-        user = self.model(email=email, **extra_fields)
+    def create_user(self, surname, password=None, **extra_fields):
+        if not surname:
+            raise ValueError('The Surname field must be set')
+        user = self.model(surname=surname, **extra_fields)
         user.set_password(password)
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, email, password=None, **extra_fields):
+    def create_superuser(self, surname, password=None, **extra_fields):
         extra_fields.setdefault('is_staff', True)
         extra_fields.setdefault('is_superuser', True)
         extra_fields.setdefault('is_active', True)
@@ -85,14 +84,14 @@ class UserManager(BaseUserManager):
             raise ValueError(_("Superuser must have is_staff=True."))
         if extra_fields.get("is_superuser") is not True:
             raise ValueError(_("Superuser must have is_superuser=True."))
-        return self.create_user(email, password, **extra_fields)
+        return self.create_user(surname, password, **extra_fields)
 
 
 class User(AbstractBaseUser):
     email = models.EmailField(unique=True)
     first_name = models.CharField(("First Name"), max_length=100, blank=True, null=True)
     middle_name = models.CharField(("Other Name"), max_length=100, blank=True, null=True)
-    last_name = models.CharField(("Last Name"), max_length=100, blank=True, null=True)
+    surname = models.CharField(("Surname"), max_length=100, blank=True, null=True, unique=True)
     age = models.PositiveIntegerField(("Age"), validators=[MaxValueValidator(50)], blank=True, null=True)
     phone_number = models.CharField(("Phone Number"), max_length=100, blank=True, null=True)
     phone_number2 = models.CharField(("Phone Number 2"), max_length=100, blank=True, null=True)
@@ -102,8 +101,8 @@ class User(AbstractBaseUser):
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
 
-    USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['first_name', 'middle_name', 'last_name', 'age', 'phone_number']
+    USERNAME_FIELD = 'surname'
+    REQUIRED_FIELDS = ['first_name', 'middle_name', 'email', 'age', 'phone_number']
 
     objects = UserManager()
 
@@ -118,7 +117,7 @@ class User(AbstractBaseUser):
     
     @property
     def full_name(self):
-        return f"{self.first_name} {self.middle_name} {self.last_name}"  
+        return f"{self.first_name} {self.middle_name} {self.surname}"  
     
 
 
@@ -191,7 +190,7 @@ class Student(models.Model):
     
     @property
     def full_name(self):
-        return f"{self.user.first_name} {self.user.middle_name} {self.user.last_name}" 
+        return f"{self.user.first_name} {self.user.middle_name} {self.user.surname}" 
     
 
 
@@ -252,5 +251,5 @@ class Staff(models.Model):
     
     @property
     def full_name(self):
-        return f"{self.user.first_name} {self.user.middle_name} {self.user.last_name}" 
+        return f"{self.user.first_name} {self.user.middle_name} {self.user.surname}" 
     

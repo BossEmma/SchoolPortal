@@ -5,11 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'student/css/table.css' %}">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="{% static 'student/js/script.js' %}"></script>
 
     <title>Dashboard</title>
+
+    <style type="text/css">
+        body,td,th {
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
     {% include "./utils/side-nav.html" %}
@@ -17,139 +24,243 @@
     <div id="main">
         {% include "./utils/header.html" %}
 
-        <div id="main2" style="overflow-x:auto;">
-            <div>
-                <text>Transaction Histoy</text>
-                <text>You can click on Update link to update your payment on the portal</text>                
-            </div>
-
-            <div style="overflow-x:auto;">
-
-                <table>
+        <div id="main2">
+            <table style="margin-top: 50px;">
+                <td>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><strong>Full Name:</strong></td>
+                                <td><strong>Eferakeya</strong> Oghenevwegba Emmanuel</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Class:</strong></td><td>JSS 3</td>
+                            </tr>
+                            <tr>
+                                <td ><strong>SESSION:</strong></td><td >2023/2023</td>
+                            </tr>
+                            <tr>
+                                <td ><strong>TERM</strong></td><td>1ST</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </table>   
+            <br>
+            
+            <table style="overflow-x:auto;">
+                <tbody>         
                     <tr>
-                        <th>Subjects</th>
-                        <th>1st Test</th>
-                        <th>2st Test</th>
-                        <th>Exam</th>
-                        <th>Total</th>
-                        <th>Grade</th>
-                    </tr>
+                        <td><strong>Subject</strong></td>
+                        <td><strong>C.A</strong></td>
+                        <td><strong>Test</strong></td>
+                        <td><strong>Exam</strong></td>
+                        <td><b>Total</b></td>
+                        <td><b> Grade</b></td>
+                    </tr>   
                     <tr>
-                        <td>English Language</td>
-                        <td>20</td>
-                        <td>20</td>
-                        <td>270</td>
-                        <td>334</td>
+                        <td>Quantitative Reasoning</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
                         <td>A</td>
-                    </tr>
+                    </tr>    
+                    
+                    <tr>
+                        <td>Quantitative Reasoning</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>A</td>
+                    </tr>      
 
                     <tr>
-                        <td>English Language</td>
-                        <td>20</td>
-                        <td>20</td>
-                        <td>270</td>
-                        <td>334</td>
+                        <td>Quantitative Reasoning</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
                         <td>A</td>
-                    </tr>
+                    </tr>   
+                    
+                    <tr>
+                        <td>Quantitative Reasoning</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>A</td>
+                    </tr>    
+                    
+                    <tr>
+                        <td>Quantitative Reasoning</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>A</td>
+                    </tr>      
 
                     <tr>
-                        <td>English Language</td>
-                        <td>20</td>
-                        <td>20</td>
-                        <td>270</td>
-                        <td>334</td>
+                        <td>Quantitative Reasoning</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
                         <td>A</td>
-                    </tr>
+                    </tr>  
 
                     <tr>
-                        <td>English Language</td>
-                        <td>20</td>
-                        <td>20</td>
-                        <td>270</td>
-                        <td>334</td>
+                        <td>Quantitative Reasoning</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
                         <td>A</td>
-                    </tr>
+                    </tr>    
+                    
+                    <tr>
+                        <td>Quantitative Reasoning</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>A</td>
+                    </tr>      
 
                     <tr>
-                        <td>English Language</td>
-                        <td>20</td>
-                        <td>20</td>
-                        <td>270</td>
-                        <td>334</td>
+                        <td>Quantitative Reasoning</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
                         <td>A</td>
-                    </tr>
+                    </tr>  
 
                     <tr>
-                        <td>English Language</td>
-                        <td>20</td>
-                        <td>20</td>
-                        <td>270</td>
-                        <td>334</td>
+                        <td>Quantitative Reasoning</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
                         <td>A</td>
-                    </tr>
+                    </tr>    
+                    
+                    <tr>
+                        <td>Quantitative Reasoning</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>A</td>
+                    </tr>      
 
                     <tr>
-                        <td>English Language</td>
-                        <td>20</td>
-                        <td>20</td>
-                        <td>270</td>
-                        <td>334</td>
+                        <td>Quantitative Reasoning</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
                         <td>A</td>
-                    </tr>
+                    </tr>  
 
                     <tr>
-                        <td>English Language</td>
-                        <td>20</td>
-                        <td>20</td>
-                        <td>270</td>
-                        <td>334</td>
+                        <td>Quantitative Reasoning</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
                         <td>A</td>
-                    </tr>
+                    </tr>    
+                    
+                    <tr>
+                        <td>Quantitative Reasoning</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>A</td>
+                    </tr>      
 
                     <tr>
-                        <td>English Language</td>
-                        <td>20</td>
-                        <td>20</td>
-                        <td>270</td>
-                        <td>334</td>
+                        <td>Quantitative Reasoning</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
                         <td>A</td>
-                    </tr>
+                    </tr>  
+                </tbody>
+            </table>
+            <br>
+            <tr>
+                <td colspan="2"><table width="100%"></td>
+                <tr>
+                    <td valign="top">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td height="30" colspan="2"><strong>Grade Analysis</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Range of Score</strong></td>
+                                    <td><strong>Grade</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>70 - 100</td><td>A</td>
+                                </tr>
+                                <tr>
+                                    <td>60 - 69</td><td>B</td>
+                                </tr>
+                                <tr>
+                                    <td>50 - 59</td><td>C</td>
+                                </tr>
+                                <tr>
+                                    <td>45 - 49</td><td>D</td>
+                                </tr>
+                                <tr>
+                                    <td >0 - 44</td><td>F</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td valign="top">
+                        <table>
+                            <tr>
+                                <td height="30" colspan="2"><strong>Class of Degree</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Range of Score</strong></td>
+                                <td><strong>Grade</strong></td>
+                            </tr>
+                            <tr>
+                                <td>70% - 100%</td>
+                                <td>Distinction</td>
+                            </tr>
+                            <tr>
+                                <td>70% - 100%</td>
+                                <td>Excellent</td>
+                            </tr>
+                            <tr>
+                                <td>60% - 69%</td>
+                                <td>Merit</td>
+                            </tr>
+                            <tr>
+                                <td>45% - 49%</td>
+                                <td>Pass</td>
+                            </tr>
+                            <tr>
+                                <td>0% - 44%</td>
+                                <td>Fail</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </tr>
 
-                    <tr>
-                        <td>English Language</td>
-                        <td>20</td>
-                        <td>20</td>
-                        <td>270</td>
-                        <td>334</td>
-                        <td>A</td>
-                    </tr>
-
-                    <tr>
-                        <td>English Language</td>
-                        <td>20</td>
-                        <td>20</td>
-                        <td>270</td>
-                        <td>334</td>
-                        <td>A</td>
-                    </tr>
-
-                    <tr>
-                        <td>English Language</td>
-                        <td>20</td>
-                        <td>20</td>
-                        <td>270</td>
-                        <td>334</td>
-                        <td>A</td>
-                    </tr>
-                </table>
-            </div>
-
-            <div id="analysis">
-                <h2>Transaction History</h2>
-                <h5>You can click on Update link to update your payment on the portal</h5>
-            </div>
-
-            <!--<h5>© 2012 - 2024. Federal University of Petroleum Resources, Effurun | Student Online Academic Portal (SOAP)</h5>-->
+            <button>pkwdk</button>
         </div>
     </div>
 </body>

@@ -61,22 +61,35 @@ body{
     justify-content: space-between;
     margin: 0%;
     font-family: sans-serif;
+    font-size: 14px;
 }
 
 
 #main{
     width: 82%;
     margin-left: 18%;
-    padding: 30px;
     box-sizing: border-box;
     background-color: var(--primary-bg-color);
+}
+
+
+#main2{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 50px;
+    padding-top: 100px;
 }
 
 
 @media screen and (max-width: 1000px) {
     #main{
         width: 100%;
-        padding: 10px;
         margin-left: 0px;
     }
+
+    #main2{
+        padding: 10px;
+        padding-top: 100px;
+    }
+    
 }

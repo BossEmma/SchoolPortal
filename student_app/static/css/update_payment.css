@@ -1,0 +1,55 @@
+@import url("./utils/root.css");
+
+
+
+.content{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 100%;
+    border-width: 1px;
+    box-sizing: border-box;
+}
+
+.content img{
+    width: 50%;
+}
+
+.payment-con{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    border-style: none;
+    width: 100%;
+    border-width: 1px;
+    background-color: rgb(247, 255, 177);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.payment-con input{
+    padding: 15px;
+    box-sizing: border-box;
+    outline: none;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: rgba(99, 99, 99, 0.52);
+    border-radius: 5px;
+}
+
+.submit{
+    background-color: rgb(75, 141, 255);
+    color: white;
+    width: 100%;
+}
+
+@media screen and (max-width: 650px) {
+
+    .content img{
+        width: 100%;
+    }
+
+    .payment-con{
+        padding: 15px;
+    }
+}

@@ -50,3 +50,16 @@ class Attendance(models.Model):
     present_status = models.CharField(max_length=10)
 
 
+
+
+#Form Teacher 
+1. attendance
+2. class anouncements
+
+
+#libra
+1. notify Suggest book
+
+#
+
+

@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/table.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+
+    <title>Dashboard</title>
+
+    <style type="text/css">
+        body,td,th {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    {% include "./utils/side-nav.html" %}
+
+    <div id="main">
+        {% include "./utils/header.html" %}
+
+        <div id="main2">
+            {% for result in paginated_objects %}   
+            <table style="margin-top: 50px;">
+                <td>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><strong>Full Name:</strong></td>
+                                <td><strong>{{ result.student.user.surname }}</strong> {{ result.student.user.middle_name }}  {{ result.student.user.first_name}}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Class:</strong></td><td>{{ result.student_class }}</td>
+                            </tr>
+                            <tr>
+                                <td ><strong>SESSION:</strong></td><td >{{ result.session }}</td>
+                            </tr>
+                            <tr>
+                                <td ><strong>TERM</strong></td><td>{{ result.term }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </table>   
+            <br>
+            
+            <table style="overflow-x:auto;">
+                <tbody>         
+                    <tr>
+                        <td><strong>Subject</strong></td>
+                        <td><strong>C.A</strong></td>
+                        <td><strong>Test</strong></td>
+                        <td><strong>Exam</strong></td>
+                        <td><b>Total</b></td>
+                        <td><b> Grade</b></td>
+                    </tr>   
+                    {% for subject_result in result.subject_results.all %}  
+                    <tr>
+                        <td>{{ subject_result.subject }}</td>
+                        <td>{{ subject_result.ca_score }}</td>
+                        <td>{{ subject_result.test_score }}</td>
+                        <td>{{ subject_result.exam_score }}</td>
+                        <td>{{ subject_result.total_score }}</td>
+                        <td>{{ subject_result.grade }}</td>
+                    </tr>  
+                    {% endfor %}  
+
+                </tbody>
+            </table>
+            <br>
+            <!--tr>
+                <td colspan="2"><table width="100%"></td>
+                <tr>
+                    <td valign="top">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td height="30" colspan="2"><strong>Grade Analysis</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Range of Score</strong></td>
+                                    <td><strong>Grade</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>70 - 100</td><td>A</td>
+                                </tr>
+                                <tr>
+                                    <td>60 - 69</td><td>B</td>
+                                </tr>
+                                <tr>
+                                    <td>50 - 59</td><td>C</td>
+                                </tr>
+                                <tr>
+                                    <td>45 - 49</td><td>D</td>
+                                </tr>
+                                <tr>
+                                    <td >0 - 44</td><td>F</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td valign="top">
+                        <table>
+                            <tr>
+                                <td height="30" colspan="2"><strong>Class of Degree</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Range of Score</strong></td>
+                                <td><strong>Grade</strong></td>
+                            </tr>
+                            <tr>
+                                <td>70% - 100%</td>
+                                <td>Distinction</td>
+                            </tr>
+                            <tr>
+                                <td>70% - 100%</td>
+                                <td>Excellent</td>
+                            </tr>
+                            <tr>
+                                <td>60% - 69%</td>
+                                <td>Merit</td>
+                            </tr>
+                            <tr>
+                                <td>45% - 49%</td>
+                                <td>Pass</td>
+                            </tr>
+                            <tr>
+                                <td>0% - 44%</td>
+                                <td>Fail</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </tr>-->
+            {% endfor %}
+        </div>
+
+        {% include "./utils/pagination.html" %}
+    </div>
+</body>
+</html>

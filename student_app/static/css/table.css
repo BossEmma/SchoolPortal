@@ -1,0 +1,32 @@
+@import url("utils/root.css");
+
+
+
+#con{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.182);
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    white-space: nowrap;
+}
+  
+tr:nth-child(even) {
+    background-color: #f5f5f5;
+}

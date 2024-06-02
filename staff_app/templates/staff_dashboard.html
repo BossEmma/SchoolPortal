@@ -1,0 +1,139 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+
+    <title>{{ url }}</title>
+</head>
+<body>
+    {% include "./staff_utils/side-nav.html" %}
+
+    <div id="main">
+        {% include "./utils/header.html" %}
+
+        <div id="main2">
+            <div class="content" id="student">
+                <div class="card-con" id="main-card-con">
+                    <div class="card">
+                        <div class="lane">
+                            <text>Name: </text>
+                            <i class="fa-solid card-icon fa-user"></i>
+                        </div>
+
+                        <div class="lane">
+                            <text class="mid-bold-text">Emmanuel</text>
+                        </div>
+
+                        <div class="lane">
+                            <text>2023/2024</text>
+                            <text>1st Term</text>
+                        </div>
+                    </div>
+    
+                    <div class="card" style="background-color: rgb(120, 255, 136);">
+                        <div class="lane">
+                            <text>Role</text>
+                            <i class="fa-solid card-icon  fa-book-open"></i>
+                        </div>
+
+                        <div class="lane">
+                            <text class="mid-bold-text">Teacher</text>
+                        </div>
+
+                        <div class="lane">
+                     
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-con">
+                    <div class="card" style="background-color: rgb(254, 129, 131);">
+                        <div class="lane">
+                            <text>SUBJECT</text>
+                            <i class="fa-solid card-icon fa-square-poll-vertical"></i>
+                        </div>
+
+                        <div class="lane">
+                            <text class="mid-bold-text">English</text>
+                        </div>
+
+                        <div class="lane">
+                    
+                        </div>
+                    </div>
+
+                    <div class="card" style="background-color: rgb(247, 130, 255);">
+                        <div class="lane">
+                            <text>STATUS</text>
+                            <i class="fa-solid card-icon fa-graduation-cap"></i>
+                        </div>
+
+                        <div class="lane">
+                            <text class="mid-bold-text">ON-Going</text>
+                        </div>
+
+                        <div class="lane">
+                         
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card-con">
+                    <div class="card" style="background-color: rgb(254, 129, 131);">
+                        <div class="lane">
+                            <text>SALARY</text>
+                            <i class="fa-solid card-icon fa-square-poll-vertical"></i>
+                        </div>
+
+                        <div class="lane">
+                            <text class="mid-bold-text">N80,000</text>
+                        </div>
+
+                        <div class="lane">
+                    
+                        </div>
+                    </div>
+
+                    <div class="card" style="background-color: rgb(247, 130, 255);">
+                        <div class="lane">
+                            <text>STATUS</text>
+                            <i class="fa-solid card-icon fa-graduation-cap"></i>
+                        </div>
+
+                        <div class="lane">
+                            <text class="mid-bold-text">{{ status }}</text>
+                        </div>
+
+                        <div class="lane">
+                         
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="content" id="info">
+                <div class="notif-con">
+                    <div class="con-header">Recent Activities</div>
+                    <img src="{% static 'images/empty.svg' %}"/>
+                </div>
+
+                <div class="notif-con">
+                    <div class="con-header">Announcements</div>
+                    <img src="{% static 'images/empty.svg' %}"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

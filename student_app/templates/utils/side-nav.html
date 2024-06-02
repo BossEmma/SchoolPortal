@@ -1,0 +1,143 @@
+{% load static %}
+<style>
+    :root{
+        --secondary-bg-color: rgb(239, 239, 239); 
+        --primary-txt-color: rgb(42, 42, 42);
+    }
+
+
+    #side-nav{
+        width: 18%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        overflow-x: hidden;
+        transition: 0.3s;
+        position: fixed;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: var(--secondary-bg-color);
+        padding: 15px;
+        box-sizing: border-box;
+        z-index: 3;
+    }
+
+    #close-nav{
+        display: none;
+    }
+
+    .nav-links{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .nav-links a{
+        width: 100%;
+        text-decoration: none;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+    
+    .nav-links a:hover{
+        color: black;
+        font-weight: 550;
+        border-color: var(--primary-txt-color);
+    }
+
+    #side-header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .dropdown-container{
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+        transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    }
+
+    .dropdown-container a:hover{
+        background-color: var(--secondary-bg-color);
+    }
+
+    @media screen and (max-width: 1000px) {
+
+        #side-nav{
+            width: 0px;
+            padding: 0px;
+            overflow-x: hidden;
+        }   
+
+        #close-nav{
+            font-size: 40px;
+            display: block;
+        }
+    }
+</style>    
+
+<div id="side-nav">
+    <div id="side-header">
+        <text class="mid-text">School</text>
+        <i onclick="CloseSideNav()" id="close-nav" class="fa-regular fa-circle-xmark"></i>
+    </div>
+
+    <div class="nav-links">
+        <a href="{% url 'student_dashboard' %}" class="small-text"><i class="fa-solid fa-house-chimney"></i>&nbsp;&nbsp; Dashboard</a>
+        <a href="{% url 'student_results' %}" class="small-text"><i class="fa-solid fa-square-poll-vertical"></i>&nbsp;&nbsp; Results</a>
+        <a href="#" class="dropdown-btn small-text"><i class="fa-solid fa-credit-card"></i>&nbsp;&nbsp; E-payment <i class="fa fa-caret-down"></i></a>
+        <div class="dropdown-container">
+            <a href="{% url 'student_make_payment' %}" class="small-text">Make Payment</a>
+            <a href="{% url 'student_update_payment' %}" class="small-text">Update Payment</a>
+            <a href="{% url 'student_payment_guideline' %}" class="small-text">Payment Guideline</a>
+            <a href="{% url 'student_transaction_history' %}" class="small-text">Transaction History</a>
+            <a href="{% url 'student_fee_structure' %}" class="small-text">Fee Structure</a>
+        </div>
+        <a href="{% url 'student_profile' %}" class="small-text"><i class="fa-solid fa-user"></i>&nbsp;&nbsp; Profile</a>
+    </div>
+
+    <div class="nav-links">
+        <a href="#" class="dropdown-btn small-text"><i class="fa-solid fa-gears"></i>&nbsp;&nbsp; Settings <i class="fa fa-caret-down"></i></a>
+        <div class="dropdown-container">
+            <a href="{% url 'student_change_password' %}" class="small-text">Change Password</a>
+            <a href="#" class="small-text">Update Payment</a>
+        </div>
+        
+        <a href="{% url 'sign_out' %}" class="small-text"><i class="fa-solid fa-right-from-bracket"></i>&nbsp;&nbsp; Sign Out</a>
+    </div>
+
+</div>
+
+<script>
+    function CloseSideNav(){
+        document.getElementById("side-nav").style.width= '0%'
+        document.getElementById("side-nav").style.padding= '0px';
+    }
+
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+    
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "flex") {
+          dropdownContent.style.display = "none";
+        } else {
+          dropdownContent.style.display = "flex";
+        }
+      });
+    }
+
+</script>

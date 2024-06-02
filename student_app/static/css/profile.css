@@ -1,0 +1,81 @@
+@import url("utils/root.css");
+
+
+#student{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+#img-con{
+    border-radius: 50%;
+    overflow: hidden;
+    height: 160px;
+    width: 170px;
+    object-fit: cover;
+    object-position: center;
+}
+
+#img-con img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#INFO{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 70px;
+    width: 100%;
+}
+
+.table-con{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.info-con{
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+}
+
+.info-box{
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: rgb(193, 193, 193);
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.row-info-con{
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+}
+
+label{
+    font-size: 16px;
+    font-weight: bold;
+}

@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/student_login.css' %}">
+    <title>Student | Login</title>
+</head>
+<body>
+
+    <div id="img-con">
+        <img src="{% static 'images/bg-01.jpg' %}" alt="" srcset="">
+    </div>
+
+    <form method="POST">{% csrf_token %}
+        <img id="badge" src="{% static 'images/badge.png' %}" alt="" srcset="">
+        <h1>Welcome Back</h1>
+        <div class="input-con">
+            <label>Surname</label>
+            <input class="input-box" placeholder="Enter Surname" type="text" name="surname" required/>
+        </div>
+
+        <div class="input-con">
+            <label>Password</label>
+            <input class="input-box" placeholder="Enter Password" type="password" name="password" required/>
+        </div>
+
+        <input type="submit" value="Login" id="submit"/>
+
+        <a href="#">Forgot Password?</a>
+    </form>
+    
+</body>
+</html>

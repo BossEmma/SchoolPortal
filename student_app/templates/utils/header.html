@@ -1,0 +1,111 @@
+{% load static %}
+
+<style>
+    #header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+        background-color: white;
+        position: fixed;
+        width: 100%;
+        padding: 15px;
+        padding-left: 20px;
+        padding-right: 30px;
+        z-index: 2;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.235);
+    }
+    
+    #ham{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .fa-bars{
+        display: none;
+    }
+
+    #header-con{
+        margin-right: 18%;
+        display: flex;
+        flex-direction: row;
+        width: 25%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #prof-con{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 65%;
+        align-items: baseline;
+    }
+
+    #prof-img{
+        border-radius: 50%;
+        width: 50px;
+        height: 45px;
+        overflow: hidden;
+    }
+
+    #prof-img img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+
+    
+
+    @media screen and (max-width: 1000px) {
+        .fa-bars{
+            display: block;
+        }
+    
+        #username{
+            display: none;
+        }    
+
+        #header-con{
+            margin-right: 0%;
+        }
+
+        #prof-con{
+            justify-content: center;
+        }
+    }
+</style>
+
+
+<div id="header">
+    <span id="ham">
+        <i onclick="OpenSideNav()" class="fa-solid fa-bars mid-text"></i>
+        &nbsp;&nbsp;<text class="mid-bold-text">&nbsp;{{ url }}</text>
+    </span>
+
+    <div id="header-con">
+        <a href="student_announcements" class="small-text"><i class="fa-solid fa-bell mid-text"></i></a>
+
+        <div id="prof-con">
+            <div id="prof-img">
+                <img src="https://avatars.mds.yandex.net/i?id=0f343cf920af58edfe2a5d1935f3d1a64f33867d-9044919-images-thumbs&n=13"/>
+            </div>
+            
+            <text id="username">Eferakeya Emmanuel</text>
+        </div>
+
+    </div>    
+    
+</div>
+
+<script>
+    function OpenSideNav(){
+        document.getElementById("side-nav").style.width= '70%'
+        document.getElementById("side-nav").style.padding= '20px';
+    }
+</script>

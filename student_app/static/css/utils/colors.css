@@ -1,0 +1,11 @@
+.light-mode{
+    --primary-bg-color: white;
+    --secondary-bg-color: white;
+    --secondary-bg-color: white;
+}
+
+.dark-mode{
+    --primary-bg-color: white;
+    --secondary-bg-color: white;
+    --secondary-bg-color: white;
+}

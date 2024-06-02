@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/table.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="{% static 'js/script.js' %}"></script>
+
+    <title>Dashboard</title>
+</head>
+<body>
+    {% include "./utils/side-nav.html" %}
+
+    <div id="main">
+        {% include "./utils/header.html" %}
+
+        <div id="main2" style="overflow-x:auto;">
+            <h2>Transaction History</h2>
+            <h5>You can click on Update link to update your payment on the portal</h5>
+            <div style="overflow-x:auto;">
+
+                <table>
+                    <tr>
+                        <th>No</th>
+                        <th>Transaction</th>
+                        <th>Description</th>
+                        <th>Amount (₦)</th>
+                        <th>Session</th>
+                        <th>Date</th>
+                        <th>Class</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>RRR: 23423340230412<br><br>TID: 23423340230412</td>
+                        <td>School Fees</td>
+                        <td>27,000</td>
+                        <td>2023/2024</td>
+                        <td>15 may</td>
+                        <td>JSS 1</td>
+                        <td>Print</td>
+                    </tr>
+
+
+                    <tr>
+                        <td>1</td>
+                        <td>RRR: 23423340230412<br><br>TID: 23423340230412</td>
+                        <td>School Fees</td>
+                        <td>27,000</td>
+                        <td>2023/2024</td>
+                        <td>15 may</td>
+                        <td>JSS 1</td>
+                        <td>Print</td>
+                    </tr>
+
+                    <tr>
+                        <td>1</td>
+                        <td>RRR: 23423340230412<br><br>TID: 23423340230412</td>
+                        <td>School Fees</td>
+                        <td>27,000</td>
+                        <td>2023/2024</td>
+                        <td>15 may</td>
+                        <td>JSS 1</td>
+                        <td>Print</td>
+                    </tr>
+
+
+                    <tr>
+                        <td>1</td>
+                        <td>RRR: 23423340230412<br><br>TID: 23423340230412</td>
+                        <td>School Fees</td>
+                        <td>27,000</td>
+                        <td>2023/2024</td>
+                        <td>15 may</td>
+                        <td>JSS 1</td>
+                        <td>Print</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!--<h5>© 2012 - 2024. Federal University of Petroleum Resources, Effurun | Student Online Academic Portal (SOAP)</h5>-->
+        </div>
+    </div>
+</body>
+</html>

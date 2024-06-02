@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/table.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="{% static 'js/script.js' %}"></script>
+
+    <title>Dashboard</title>
+</head>
+<body>
+    {% include "./utils/side-nav.html" %}
+
+    <div id="main">
+        {% include "./utils/header.html" %}
+
+        <div id="main2">
+            <h2>Fee Structure</h2>
+
+            <table>
+                <tr>
+                    <th>No</th>
+                    <th>Description</th>
+                    <th>Amount (₦)</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>School Fees</td>
+                    <td>27,000</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>ICT Fees</td>
+                    <td>27,000</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Uniform Fees</td>
+                    <td>27,000</td>
+                </tr>
+            </table>
+
+            <!--<h5>© 2012 - 2024. Federal University of Petroleum Resources, Effurun | Student Online Academic Portal (SOAP)</h5>-->
+        </div>
+    </div>
+</body>
+</html>

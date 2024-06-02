@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/update_payment.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+
+    <title>Dashboard</title>
+</head>
+<body>
+    {% include "./utils/side-nav.html" %}
+
+    <div id="main">
+        {% include "./utils/header.html" %}
+
+        <div id="main2">
+            <div class="content" id="student">
+
+                <text class="mid-bold-text">Make Payment</text>
+
+                <text>Remita provide the opportunity of making payment using the following options</text>
+
+                <img src="{% static 'images/Remita.png' %}"/>
+
+                <div class="payment-con">
+
+                    <input class="input-box" placeholder="Enter Transaction ID"/>
+
+                    <input class="input-box" placeholder="Enter Transaction ID"/>
+
+                    <input class="input-box" placeholder="Enter Transaction ID"/>
+
+                    <input class="input-box" placeholder="Enter Transaction ID"/>
+
+                    <input class="input-box" placeholder="Enter Transaction ID"/>
+
+                    <input class="submit" type="submit" value="Update"/>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
